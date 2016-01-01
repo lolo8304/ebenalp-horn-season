@@ -1,0 +1,105 @@
+{
+  "name": "tracking",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "index": true
+    },
+    "altitude": {
+      "type": "number"
+    },
+    "h_accuracy": {
+      "type": "number",
+      "index": false
+    },
+    "speed": {
+      "type": "number"
+    },
+    "trigger_id": {
+      "type": "string",
+      "required": true
+    },
+    "longitude": {
+      "type": "number",
+      "required": true,
+      "index": false
+    },
+    "latitude": {
+      "type": "number",
+      "required": true,
+      "index": false
+    },
+    "event": {
+      "type": "string",
+      "required": true,
+      "index": true
+    },
+    "device_alias": {
+      "type": "string",
+      "required": true,
+      "index": true
+    },
+    "application_id": {
+      "type": "string",
+      "required": true,
+      "index": true
+    },
+    "action_id": {
+      "type": "string",
+      "required": true,
+      "index": true
+    },
+    "data": {
+      "type": "string",
+      "required": true,
+      "index": false
+    },
+    "bearing": {
+      "type": "number",
+      "required": false,
+      "index": false
+    },
+    "tags": {
+      "type": "string",
+      "required": true,
+      "index": true
+    },
+    "trigger_name": {
+      "type": "string",
+      "required": true
+    },
+    "trigger_type": {
+      "type": "string",
+      "required": true
+    },
+    "trigger_at": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

@@ -1,0 +1,55 @@
+{
+  "name": "customer",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "category": {
+      "type": "string",
+      "required": true,
+      "comments": "ex. Erwachsene, Jugendliche, Kinder, Hornli"
+    },
+    "dateOfBirth": {
+      "type": "date",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "index": true
+    },
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "season": {
+      "type": "string",
+      "required": true,
+      "index": true,
+      "comments": "example 2015-2016"
+    },
+    "userId": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

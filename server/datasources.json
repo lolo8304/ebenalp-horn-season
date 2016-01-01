@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "lolo": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "localhost",
+    "database": "lolo",
+    "password": "5e8wKlWo0LPBz3SaQVGm",
+    "name": "lolo",
+    "connector": "mysql",
+    "user": "lolo"
+  }
+}
