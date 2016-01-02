@@ -1,7 +1,13 @@
 {
   "db": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "localhost",
+    "database": "lolo",
+    "password": "5e8wKlWo0LPBz3SaQVGm",
     "name": "db",
-    "connector": "memory"
+    "connector": "mysql",
+    "user": "lolo"
   },
   "lolo": {
     "host": "localhost",

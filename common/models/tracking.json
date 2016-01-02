@@ -83,10 +83,21 @@
     "trigger_at": {
       "type": "number",
       "required": true
+    },
+    "customer_id": {
+      "type": "number",
+      "required": true,
+      "index": true
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "customer",
+      "foreignKey": "customer_id"
+    }
+  },
   "acls": [
     {
       "accessType": "*",

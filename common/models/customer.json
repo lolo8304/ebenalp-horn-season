@@ -16,12 +16,6 @@
       "type": "date",
       "required": true
     },
-    "email": {
-      "type": "string",
-      "id": true,
-      "required": true,
-      "index": true
-    },
     "firstname": {
       "type": "string",
       "required": true
@@ -30,19 +24,56 @@
       "type": "string",
       "required": true
     },
+    "street": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "number",
+      "id": false,
+      "required": true
+    },
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "index": true
+    },
     "season": {
       "type": "string",
       "required": true,
-      "index": true,
+      "index": false,
       "comments": "example 2015-2016"
     },
-    "userId": {
+    "device_alias": {
       "type": "string",
-      "required": true
+      "index": true
+    },
+    "email": {
+      "type": "string",
+      "id": false,
+      "required": true,
+      "index": true
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "trackings": {
+      "type": "hasMany",
+      "model": "tracking",
+      "foreignKey": "customer_id"
+    },
+    "user": {
+      "type": "belongsTo",
+      "model": "User",
+      "foreignKey": "userid"
+    }
+  },
   "acls": [
     {
       "accessType": "*",
