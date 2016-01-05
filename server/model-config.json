@@ -14,7 +14,11 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": true,
+    "options": {
+      "emailVerificationRequired": true
+    }
   },
   "AccessToken": {
     "dataSource": "db",
@@ -31,6 +35,9 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Email": {
+    "dataSource": "schneeHornEmailDataSource"
   },
   "customer": {
     "dataSource": "lolo",
