@@ -25,3 +25,38 @@ boot(app, __dirname, function(err) {
   if (require.main === module)
     app.start();
 });
+
+function isFunctionA(functionToCheck) {
+ var getType = {};
+ return functionToCheck && getType.toString.call(functionToCheck) === '[object Function]';
+}
+
+app.use("/api/customers/webhookRoximity", function(req, res, next) {
+var pars = req["headers"]
+var output = '';
+for (var property in pars) {
+if (isFunctionA(pars[property])) {
+//output += property + ': ' + pars[property]+';\n-----------------------------------------\n ';
+} else {
+  output += property + ': ' + pars[property]+';\n ';
+}
+}
+/*
+   req.on('data', function(data) {
+	console.log("type of data="+(typeof data)+", constructor="+(data.constructor.name));
+	console.log('data='+data);
+	if (typeof data  === 'Buffer') {
+		req["_buffer"] = data;
+		console.log("before regexp");
+		var data2 = data.replace(/(.*) ([a-zA-Z_0-9]+):(.*\n)/, function(a, b, c){
+    			return a+'"'+d+'":'+c;
+		})
+		console.log('data2='+data2);
+		return data2;
+	}
+	return data;
+   })
+*/
+   console.log('hello world from "catch-all" route '+output);
+   next();
+});
