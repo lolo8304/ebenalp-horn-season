@@ -2,7 +2,7 @@
   "name": "tracking",
   "base": "PersistedModel",
   "strict": false,
-  "idInjection": false,
+  "idInjection": true,
   "options": {
     "validateUpsert": true
   },
@@ -12,30 +12,6 @@
       "id": true,
       "required": true,
       "index": true
-    },
-    "altitude": {
-      "type": "number"
-    },
-    "h_accuracy": {
-      "type": "number",
-      "index": false
-    },
-    "speed": {
-      "type": "number"
-    },
-    "trigger_id": {
-      "type": "string",
-      "required": true
-    },
-    "longitude": {
-      "type": "number",
-      "required": true,
-      "index": false
-    },
-    "latitude": {
-      "type": "number",
-      "required": true,
-      "index": false
     },
     "event": {
       "type": "string",
@@ -57,16 +33,6 @@
       "required": true,
       "index": true
     },
-    "data": {
-      "type": "string",
-      "required": true,
-      "index": false
-    },
-    "bearing": {
-      "type": "number",
-      "required": false,
-      "index": false
-    },
     "tags": {
       "type": "string",
       "required": true,
@@ -80,14 +46,55 @@
       "type": "string",
       "required": true
     },
-    "trigger_at": {
-      "type": "number",
-      "required": true
-    },
     "customer_id": {
       "type": "number",
       "required": true,
       "index": true
+    },
+    "trigger_id": {
+      "type": "string",
+      "required": true
+    },
+    "created": {
+      "type": "date",
+      "required": false,
+      "index": false
+    },
+    "latitude": {
+      "type": "string",
+      "required": true,
+      "index": false
+    },
+    "longitude": {
+      "type": "string",
+      "required": true,
+      "index": false
+    },
+    "speed": {
+      "type": "string"
+    },
+    "altitude": {
+      "type": "string"
+    },
+    "bearing": {
+      "type": "string",
+      "required": false,
+      "index": false
+    },
+    "h_accuracy": {
+      "type": "string",
+      "index": false
+    },
+    "triggered_at": {
+      "type": "string",
+      "required": true
+    },
+    "age": {
+      "type": "string"
+    },
+    "triggered_at_date": {
+      "type": "date",
+      "required": false
     }
   },
   "validations": [],

@@ -22,18 +22,20 @@
   "schneeHornEmailDataSource": {
     "name": "schneeHornEmailDataSource",
     "connector": "mail",
-       "transports": [{
-         "type": "smtp",
-         "host": "schiller.metanet.ch",
-         "secure": true,
-         "port": 587,
-	 "ignoreTLS": true,
-	 "debug":true,
-	 "authMethod": "PLAIN",
-         "auth": {
-           "user": "noreply@schnee-horn.ch",
-           "pass": "e5Ih5n4@"
-         }
-       }]
+    "transports": [
+      {
+        "type": "smtp",
+        "host": "schiller.metanet.ch",
+        "secure": true,
+        "port": 587,
+        "ignoreTLS": true,
+        "debug": true,
+        "authMethod": "PLAIN",
+        "auth": {
+          "user": "noreply@schnee-horn.ch",
+          "pass": "e5Ih5n4@"
+        }
+      }
+    ]
   }
 }
