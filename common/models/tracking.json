@@ -60,41 +60,41 @@
       "required": false,
       "index": false
     },
-    "latitude": {
-      "type": "string",
-      "required": true,
-      "index": false
-    },
-    "longitude": {
-      "type": "string",
-      "required": true,
-      "index": false
-    },
-    "speed": {
-      "type": "string"
+    "triggered_at_date": {
+      "type": "date",
+      "required": false
     },
     "altitude": {
-      "type": "string"
+      "type": "number"
+    },
+    "age": {
+      "type": "number"
     },
     "bearing": {
-      "type": "string",
+      "type": "number",
       "required": false,
       "index": false
     },
     "h_accuracy": {
-      "type": "string",
+      "type": "number",
       "index": false
     },
+    "latitude": {
+      "type": "number",
+      "required": true,
+      "index": false
+    },
+    "longitude": {
+      "type": "number",
+      "required": true,
+      "index": false
+    },
+    "speed": {
+      "type": "number"
+    },
     "triggered_at": {
-      "type": "string",
+      "type": "number",
       "required": true
-    },
-    "age": {
-      "type": "string"
-    },
-    "triggered_at_date": {
-      "type": "date",
-      "required": false
     }
   },
   "validations": [],

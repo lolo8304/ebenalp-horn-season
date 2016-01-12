@@ -50,5 +50,11 @@
     "public": true,
     "$promise": {},
     "$resolved": true
+  },
+  "trigger_location": {
+    "dataSource": "lolo",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }

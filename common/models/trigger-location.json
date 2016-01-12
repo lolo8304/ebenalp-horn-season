@@ -1,0 +1,60 @@
+{
+  "name": "trigger_location",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "heightMax": {
+      "type": "number",
+      "required": true
+    },
+    "heightMin": {
+      "type": "number",
+      "required": true
+    },
+    "index": {
+      "type": "number",
+      "required": true,
+      "index": true
+    },
+    "isSingleLocation": {
+      "type": "boolean",
+      "required": true
+    },
+    "isStartingPoint": {
+      "type": "boolean",
+      "required": true
+    },
+    "maximalTimeDifferenceInS": {
+      "type": "number",
+      "required": true
+    },
+    "minimalTimeDifferenceInS": {
+      "type": "number",
+      "required": true,
+      "index": false
+    },
+    "trigger_event": {
+      "type": "string",
+      "required": true
+    },
+    "trigger_group": {
+      "type": "string",
+      "required": true,
+      "index": true
+    },
+    "trigger_name": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "index": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

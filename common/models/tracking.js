@@ -53,7 +53,7 @@ module.exports = function(Tracking) {
 	if (debug) { console.log(dateNow.toString()+' - email <'+email+'> id <'+customerId+' unpacked device_alias'); }
 	this.create({
 		id: 0,
-		altitude: data["location"]["alt"].toString(),
+		altitude: data["location"]["alt"],
 		h_accuracy: data["location"]["h_accuracy"].toString(),
 		speed: data["location"]["speed"].toString(),
 		trigger_id: data["trigger_id"],
@@ -64,6 +64,7 @@ module.exports = function(Tracking) {
 		created: dateNow,
 		application_id: data["application_id"],
 		action_id: data["action_id"],
+		age: data["location"]["age"].toString(),
 		bearing: data["location"]["bearing"].toString(),
 		tags: data["tags"][0],
 		trigger_name: data["trigger"]["name"],
