@@ -51,9 +51,15 @@
     "$promise": {},
     "$resolved": true
   },
-  "trigger_location": {
+  "triggerLocation": {
     "dataSource": "lolo",
     "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "lastTracking": {
+    "dataSource": "lolo",
+    "public": false,
     "$promise": {},
     "$resolved": true
   }

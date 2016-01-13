@@ -26,6 +26,12 @@ function splitDeviceAlias(device_alias) {
 
 
 module.exports = function(Tracking) {
+Tracking.disableRemoteMethod('upsert', true);                // Removes (PUT) /products
+Tracking.disableRemoteMethod('deleteById', true);            // Removes (DELETE) /products/:id
+Tracking.disableRemoteMethod("updateAll", true);               // Removes (POST) /products/update
+Tracking.disableRemoteMethod("updateAttributes", false);       // Removes (PUT) /products/:id
+Tracking.disableRemoteMethod('createChangeStream', true);    // removes (GET|POST) /products/change-stream
+
    Tracking.webhookRoximity = function(req, res, cb) {
 	var debug = true
 	var debug2 = false

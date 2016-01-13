@@ -1,8 +1,12 @@
 {
-  "name": "trigger_location",
+  "name": "triggerLocation",
   "base": "PersistedModel",
   "strict": false,
   "idInjection": false,
+  "mysql": {
+    "schema": "lolo",
+    "table": "trigger_location"
+  },
   "options": {
     "validateUpsert": true
   },

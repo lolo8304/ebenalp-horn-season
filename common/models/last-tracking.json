@@ -1,0 +1,38 @@
+{
+  "name": "lastTracking",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": false
+  },
+  "mysql": {
+    "schema": "lolo",
+    "table": "last_tracking"
+  },
+  "properties": {
+    "trigger_group": {
+      "type": "string"
+    },
+    "trigger_name": {
+      "type": "string"
+    },
+    "event": {
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "number",
+      "id": false,
+      "required": true
+    },
+    "last_id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "index": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -72,6 +72,11 @@
       "type": "belongsTo",
       "model": "User",
       "foreignKey": "userId"
+    },
+    "lastTrackings": {
+      "type": "hasMany",
+      "model": "lastTracking",
+      "foreignKey": "customer_id"
     }
   },
   "acls": [
